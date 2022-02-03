@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c61ff82cbf0142a401a48a8161e1595a",
+    "content-hash": "ba6761e42009eae325e89ae04609774a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1658,6 +1658,62 @@
                 }
             ],
             "time": "2021-11-21T11:48:40+00:00"
+        },
+        {
+            "name": "matto1990/lastfm-api",
+            "version": "v1.6.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/matt-oakes/PHP-Last.fm-API.git",
+                "reference": "6a3125d53f5debf44dd32e41f8da49177483424b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/matt-oakes/PHP-Last.fm-API/zipball/6a3125d53f5debf44dd32e41f8da49177483424b",
+                "reference": "6a3125d53f5debf44dd32e41f8da49177483424b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "php": ">=5.3.3",
+                "phpunit/phpunit": "7.4.0",
+                "vlucas/phpdotenv": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LastFmApi\\": "src/lastfmapi/",
+                    "Tests\\": "tests"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marcos",
+                    "email": "devilcius@gmail.com"
+                },
+                {
+                    "name": "Matt",
+                    "email": "matt@oakes.ws"
+                }
+            ],
+            "description": "Last.fm webservice client",
+            "homepage": "https://github.com/matto1990/PHP-Last.fm-API",
+            "keywords": [
+                "api",
+                "last.fm",
+                "webservice client"
+            ],
+            "support": {
+                "issues": "https://github.com/matt-oakes/PHP-Last.fm-API/issues",
+                "source": "https://github.com/matt-oakes/PHP-Last.fm-API/tree/v1.6.4"
+            },
+            "time": "2019-06-14T07:38:04+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -5897,6 +5953,67 @@
                 "source": "https://github.com/laravel/sail"
             },
             "time": "2022-01-20T15:31:25+00:00"
+        },
+        {
+            "name": "laravel/ui",
+            "version": "v3.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/ui.git",
+                "reference": "e01198123f7f4369d13c1f83a897c3f5e97fc9f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/e01198123f7f4369d13c1f83a897c3f5e97fc9f4",
+                "reference": "e01198123f7f4369d13c1f83a897c3f5e97fc9f4",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^8.42|^9.0",
+                "illuminate/filesystem": "^8.42|^9.0",
+                "illuminate/support": "^8.42|^9.0",
+                "illuminate/validation": "^8.42|^9.0",
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.23|^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Ui\\UiServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Ui\\": "src/",
+                    "Illuminate\\Foundation\\Auth\\": "auth-backend/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel UI utilities and presets.",
+            "keywords": [
+                "laravel",
+                "ui"
+            ],
+            "support": {
+                "source": "https://github.com/laravel/ui/tree/v3.4.2"
+            },
+            "time": "2022-01-25T20:15:56+00:00"
         },
         {
             "name": "mockery/mockery",

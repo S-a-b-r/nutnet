@@ -14,5 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('albums.index');
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['namespace'=>'Album', 'prefix'=>'albums'], function(){
+    Route::get('/create', 'CreateController')->name('albums.create');
+    Route::get('/','IndexController')->name('albums.index');
+    Route::post('/', 'StoreController')->name('albums.store');
+    Route::get('/{album}/edit', 'EditController')->name('albums.edit');
+    Route::patch('/{album}', 'UpdateController')->name('albums.update');
+    Route::delete('/{album}', 'DestroyController')->name('albums.destroy');
 });
