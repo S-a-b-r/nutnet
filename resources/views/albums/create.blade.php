@@ -1,18 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-    <form method="post" action="{{route('albums.store')}}">
+    <form action="{{route('albums.store')}}" method="post">
         @csrf
-        <h3 class="mb-3">Enter album name and artist. We will try to find this album</h3>
         <div class="mb-3">
-            <label for="albumName" class="form-label">Album Name</label>
-            <input value="{{old('name')}}" name="name" type="text" class="form-control" id="albumName" placeholder="Enter album name">
+            <label for="nameAlbum" class="form-label">Album name</label>
+            <input name="name" value="{{old('name')}}" type="text" class="form-control" id="nameAlbum">
         </div>
         <div class="mb-3">
-            <label for="albumArtist" class="form-label">Artist name</label>
-            <input value="{{old('artist')}}" name="artist" class="form-control" id="albumArtist" placeholder="Enter artist name">
+            <label for="nameArtist" class="form-label">Artist</label>
+            <input name="artist" value="{{old('artist')}}" type="text" class="form-control" id="nameArtist">
         </div>
-        <button class="btn btn-outline-dark" type="submit">Find album</button>
+        <div class="mb-3">
+            <label for="descriptionAlbum" class="form-label">Album description</label>
+            <textarea name="description" class="form-control" id="descriptionAlbum" rows="3">{{old('description')}}</textarea>
+        </div>
+        <div class="mb-3">
+            <label for="coverAlbum" class="form-label">Вставьте ссылку на изображение из внешнего источника(например, lastFM)</label>
+            <input name="cover" id='coverAlbum' class="form-control" value="{{old('cover')}}">
+        </div>
+        <button type="submit" class="btn btn-outline-dark">Add</button>
     </form>
     @if ($errors->any())
         <div class="text-danger">
@@ -21,11 +28,6 @@
                     <li>{{ $error }}</li>
                 @endforeach
             </ul>
-        </div>
-    @endif
-    @if(isset($message))
-        <div class="text-danger">
-            {{$message}}
         </div>
     @endif
 @endsection

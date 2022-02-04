@@ -26,7 +26,9 @@ class ConfirmPasswordController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected function redirectTo(){
+        return route('albums.index');
+    }
 
     /**
      * Create a new controller instance.

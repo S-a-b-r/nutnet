@@ -3,16 +3,13 @@
 namespace App\Http\Controllers\Album;
 
 use App\Http\Controllers\Controller;
-use App\Models\Album;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
-class IndexController extends Controller
+class SearchController extends Controller
 {
     public function __invoke()
     {
-
-        $albums = Album::paginate(9);
-
-        return view('albums.index', compact('albums'));
+        return view('albums.search');
     }
 }
