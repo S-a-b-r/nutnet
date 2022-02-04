@@ -26,7 +26,7 @@
     @endif
     @if(isset($message))
         <div class="text-danger">
-            {{$message}}
+            {!! $message !!}
         </div>
     @endif
 @endsection
